@@ -10,6 +10,7 @@ Source0:	http://www.danga.com/memcached/dist/python-%{module}-%{version}.tar.gz
 URL:		http://www.danga.com/memcached/apis.bml
 BuildRequires:	rpmbuild(macros) >= 1.174
 %pyrequires_eq	python-modules
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
