@@ -8,6 +8,7 @@ Group:		Libraries/Python
 Source0:	http://www.danga.com/memcached/dist/python-%{module}-%{version}.tar.gz
 # Source0-md5:	7bbba370429bd3d7ab70bbf0828d841c
 URL:		http://www.danga.com/memcached/apis.bml
+BuildRequires:	python
 BuildRequires:	rpmbuild(macros) >= 1.174
 %pyrequires_eq	python-modules
 BuildArch:	noarch
@@ -29,9 +30,11 @@ python setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
+rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{py_scriptdir}/site-packages/*.py[co]
+%{py_sitescriptdir}/*.py[co]
