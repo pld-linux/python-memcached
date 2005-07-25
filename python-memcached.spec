@@ -1,5 +1,6 @@
 %define		module	memcached
 Summary:	memcached python client
+Summary(pl):	Pythonowy klient memcached
 Name:		python-%{module}
 Version:	1.2
 Release:	1
@@ -16,6 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 memcached python client.
+
+%description -l pl
+Pythonowy klient memcached.
 
 %prep
 %setup -q -n python-%{module}-%{version}
