@@ -1,6 +1,6 @@
 %define		module	memcached
 Summary:	memcached python client
-Summary(pl.UTF-8):   Pythonowy klient memcached
+Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
 Version:	1.2
 Release:	1
