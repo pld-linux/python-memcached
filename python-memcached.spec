@@ -11,6 +11,7 @@ Source0:	ftp://ftp.tummy.com/pub/python-%{module}/python-%{module}-%{version}.ta
 # Source0-md5:	fa551479291679871ac64ab74d1a52d0
 URL:		http://www.danga.com/memcached/apis.bml
 BuildRequires:	python-setuptools
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.174
 %pyrequires_eq	python-modules
 BuildArch:	noarch
@@ -26,12 +27,12 @@ Pythonowy klient memcached.
 %setup -q -n python-%{module}-%{version}
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
+%{__python} setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
