@@ -3,7 +3,7 @@ Summary:	memcached python client
 Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
 Version:	1.40
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 ##Source0:	http://www.danga.com/memcached/dist/python-%{module}-%{version}.tar.gz
