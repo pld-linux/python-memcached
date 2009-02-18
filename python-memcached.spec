@@ -2,13 +2,12 @@
 Summary:	memcached python client
 Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
-Version:	1.40
-Release:	2
+Version:	1.43
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-##Source0:	http://www.danga.com/memcached/dist/python-%{module}-%{version}.tar.gz
-Source0:	ftp://ftp.tummy.com/pub/python-%{module}/python-%{module}-%{version}.tar.gz
-# Source0-md5:	fa551479291679871ac64ab74d1a52d0
+Source0:	ftp://ftp.tummy.com/pub/python-%{module}/%{name}-%{version}.tar.gz
+# Source0-md5:	9bfa9d9b10dfc2d91ab74486773c6fc2
 URL:		http://www.danga.com/memcached/apis.bml
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
@@ -24,7 +23,7 @@ memcached python client.
 Pythonowy klient memcached.
 
 %prep
-%setup -q -n python-%{module}-%{version}
+%setup -q
 
 %build
 %{__python} setup.py build
@@ -36,7 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*.py
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,3 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{py_sitescriptdir}/*.py[co]
+%{py_sitescriptdir}/python_memcached-*.egg-info
