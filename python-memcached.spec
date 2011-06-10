@@ -2,12 +2,12 @@
 Summary:	memcached python client
 Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
-Version:	1.43
-Release:	2
+Version:	1.47
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.tummy.com/pub/python-%{module}/%{name}-%{version}.tar.gz
-# Source0-md5:	9bfa9d9b10dfc2d91ab74486773c6fc2
+# Source0-md5:	e4e9d65e5721a1bb01f8d657ddf3f03e
 URL:		http://www.danga.com/memcached/apis.bml
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
