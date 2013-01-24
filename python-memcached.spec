@@ -3,16 +3,16 @@ Summary:	memcached python client
 Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
 Version:	1.48
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.tummy.com/pub/python-%{module}/%{name}-%{version}.tar.gz
 # Source0-md5:	58f8c328304df6aca1f8b60170e98932
-URL:		http://www.danga.com/memcached/apis.bml
+URL:		http://www.tummy.com/Community/software/python-memcached/
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.174
-%pyrequires_eq	python-modules
+Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,8 +30,8 @@ Pythonowy klient memcached.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__python} setup.py install \
+	--skip-build \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
