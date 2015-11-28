@@ -3,7 +3,7 @@ Summary:	memcached python client
 Summary(pl.UTF-8):	Pythonowy klient memcached
 Name:		python-%{module}
 Version:	1.48
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.tummy.com/pub/python-%{module}/%{name}-%{version}.tar.gz
