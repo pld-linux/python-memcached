@@ -11,7 +11,7 @@ Source0:	ftp://ftp.tummy.com/pub/python-%{module}/%{name}-%{version}.tar.gz
 URL:		http://www.tummy.com/Community/software/python-memcached/
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.174
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
